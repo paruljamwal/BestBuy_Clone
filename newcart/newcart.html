@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="newcart.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+</head>
+<body>
+    <div id="checkouthead">
+        <div id="headflex">
+           <div id="headerdiv">
+              <div> <img src="data:image/png;base64,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" alt=""height="65px" width="80px";></div>
+             <div> Your Cart</div>
+             </div>
+             <div style="color: white; padding-top: 25px;" onclick="returntocartpage()"></div>
+        </div>
+       </div>
+
+
+
+
+    <section>
+        <div id="mainCart">
+            <div id="leftcart">
+                <h2>Your Cart</h2>
+                <div id="div1img">
+                    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-66004-vip-pol-der-dceebe1b-ba85-45fe-9408-baad357a273b.jpg;maxHeight=455;maxWidth=484" alt="" width="75px" height="65px">
+                   <div id="div1text">
+                       <h4>Join Best Buy Totaltech™ and see the benefits today.</h4>
+                       <p>24/7 tech support. Product protection. Free standard installation. And more.</p>
+                   </div>
+                   <div id="btnTotaltech"><button>Learn About Totaltech</button></div>
+                </div>
+                <div id="div2Special">
+                   <div id="Special"> <p ><span id="black1">Special Offers </span> We found offers available based on items in your cart! <span id="blue1">See all </span></p></div>
+                </div>
+                <div id="div3prod">
+                    <!-- <div id="productbag">
+                        <div><img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/6456/6456203_sd.jpg;maxHeight=100;maxWidth=100" alt="" height="20%" width="85%"></div>
+                        <div  >LG - 55" Class NanoCell 90 Series LED 4K UHD Smart webOS TV</div>
+                    </div>
+                    <div>
+                       <p style="margin: 4px;"> <input type="radio"><b>Pickup atAiea </b> <span>Aiea</span>
+                        Ready for pickup <b>Sat, Mar 5</b>
+                        Eligible for curbside pickup
+                        <span style="color: blue;" >Will this fit in your car?</span></p>
+                        <br>
+                        <p style="margin: 4px;"><input type="radio">Delivery to <span style="color: blue;">96939 96939 </span>
+                            Unavailable in your area</p>
+                        
+                    
+                    </div>
+                    <div>
+                        <select name="" id="qnt">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <p> <b style="font-weight: bolder;font-size: 16px;">$849.99</b>
+                        <br>
+                        <button style="background-color: #bb0628;color: white;border: 0px;">Save $50</button>
+                        <br>
+                        
+                        Was $899.99
+                     </p>
+                    </div> -->
+                     
+                </div>
+                <div id="div4Saveitem"></div>
+                <div id="slider">
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div style="background-color: white;width: 94%;;margin: auto;">
+                    <h2 style="font-weight: bolder;">Save Items</h2>
+                    <hr>
+                    <p style="font-size: 15px;">Need inspiration? Check out <span style="color: blue;">recommended items</span>, or search for items to save.</p>
+                </div>
+                 <div style="margin-top: 40px;font-size: 13px;">
+                    Get 2.5 points per $1 spent (5% back in rewards) on qualifying Best Buy® purchases when you choose Standard Credit with your Best Buy Credit Card. Points are not awarded on promotional credit purchases. Some products purchased at Pacific Sales® Kitchen & Home Stores are not eligible to get My Best Buy® rewards. Does not include tax. Additional limitations may apply. Subject to My Best Buy Program Terms.
+                 </div>
+            </div>
+            <div id="rightcart">
+              <div>
+                <h1 style="text-align: center;">Order Summary</h1>
+                <hr>
+                <div class="rightflex">
+                    <div>Original Price</div>
+                    <div id="paisahipaisa">$2,110.88</div>
+                </div>
+                <div class="rightflex">
+                    <div>Savings</div>
+                    <div>-$100.00</div>
+                </div>
+                <div class="rightflex">
+                    <div>Store Pickup</div>
+                    <div>FREE</div>
+                </div>
+                <div class="rightflex">
+                    <div>Estimated Sales Tax</div>
+                    <div>$94.75</div>
+                </div>
+                <hr>
+                <div id="rightflex">
+                    <div>Total</div>
+                    <div id="paisa">$2,105.63</div>
+                </div>
+                <br>
+                
+                <a href="../payment/payment.html"><button id="btnCheckout" >Checkout</button></a>
+                <br>
+                <br>
+                <button id="btnPaypal"><i>Paypal</i> <span>Checkout</span></button>
+                
+                <div><span id="paypalbelow">Sign in or create an account now</span> to get My Best Buy™ Points
+              <br> <br> </div>
+              <hr>
+              <div>
+                  <p style="font-size: 20px; font-weight: 900;margin: 6px;">Apply today,shop today</p style="font-size: 18px;">
+                 <div style="display: flex; ">
+                    <div>
+                        <img src="https://www.bestbuy.com/~assets/bby/_com/MBBCC_MBBVC_2018_RGB-947585d1258e6806d8eeb072b8d2ad6a.png" alt="" height="60px" width="100px" style="margin-top: 12px;">
+                        <p style="color: blue;margin: 4px;font-size: 13px;">Show me how ></p>
+                    </div>
+                    <div id="spanblack">
+                        <p><span>10% back in rewards</span> on first day of purchases for new My Best Buy® Credit Card members</p>
+                        <p><span>$87.74/mo.*</span> suggested monthly payments with <span> 24 month financing</span> on this purchase of $2,105.63</p>
+
+                    </div>
+                 </div>
+              </div>
+              <hr>
+              <div>
+                  <h3 style="font-size: 18px;">Looking for a lease to own option?</h3>
+                  <p>Enjoy the tech you want today.
+                   <span style="color: blue;"> Learn more ></span></p>
+              </div>
+              <hr>
+              <div>
+                  <h3 style="font-size: 18px;">
+                Buying a gift for someone special?
+
+                  </h3>
+                  <p>Gift options can be added in checkout. <span style="color: blue;">Learn more ></span></p>
+              </div>
+              </div>
+            </div>
+            
+         
+        </div>
+    </section>
+</body>
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d5165a2873.js" crossorigin="anonymous"></script>
+<script src="newcart.js">
+
+</script>

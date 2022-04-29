@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../landing page/styles/header.css">
+    <link rel="stylesheet" href="../landing page/styles/landing.css">
+    <script src="https://kit.fontawesome.com/a4b206329f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../landing page/styles/Footer.css">
+</head>
+<body>
+    <div id="header"></div>
+    <section>
+        <div id="mainCart">
+            <div id="leftcart">
+                <h2>Your Cart</h2>
+                <div id="div1img">
+                    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-66004-vip-pol-der-dceebe1b-ba85-45fe-9408-baad357a273b.jpg;maxHeight=455;maxWidth=484" alt="" width="75px" height="65px">
+                   <div id="div1text">
+                       <h4>Join Best Buy Totaltech™ and see the benefits today.</h4>
+                       <p>24/7 tech support. Product protection. Free standard installation. And more.</p>
+                   </div>
+                   <div id="btnTotaltech"><button>Learn About Totaltech</button></div>
+                </div>
+                <div id="div2Special">
+                   <div id="Special"> <p ><span id="black1">Special Offers </span> We found offers available based on items in your cart! <span id="blue1">See all </span></p></div>
+                </div>
+                <div id="div3prod">
+                    <!-- <div id="productbag">
+                        <div><img src="https://pisces.bbystatic.com/image2//BestBuy_US/images/products/6456/6456203_sd.jpg;maxHeight=100;maxWidth=100" alt="" height="20%" width="85%"></div>
+                        <div  >LG - 55" Class NanoCell 90 Series LED 4K UHD Smart webOS TV</div>
+                    </div>
+                    <div>
+                       <p style="margin: 4px;"> <input type="radio"><b>Pickup atAiea </b> <span>Aiea</span>
+                        Ready for pickup <b>Sat, Mar 5</b>
+                        Eligible for curbside pickup
+                        <span style="color: blue;" >Will this fit in your car?</span></p>
+                        <br>
+                        <p style="margin: 4px;"><input type="radio">Delivery to <span style="color: blue;">96939 96939 </span>
+                            Unavailable in your area</p>
+                        
+                    
+                    </div>
+                    <div>
+                        <select name="" id="qnt">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <p> <b style="font-weight: bolder;font-size: 16px;">$849.99</b>
+                        <br>
+                        <button style="background-color: #bb0628;color: white;border: 0px;">Save $50</button>
+                        <br>
+                        
+                        Was $899.99
+                     </p>
+                    </div> -->
+                     
+                </div>
+                <div id="div4Saveitem"></div>
+                <!-- <div id="slider">
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div> -->
+                <div style="background-color: white;width: 94%;;margin: auto;">
+                    <h2 style="font-weight: bolder;">Save Items</h2>
+                    <hr>
+                    <p style="font-size: 15px;">Need inspiration? Check out <span style="color: blue;">recommended items</span>, or search for items to save.</p>
+                </div>
+                 <div style="margin-top: 40px;font-size: 13px;">
+                    Get 2.5 points per $1 spent (5% back in rewards) on qualifying Best Buy® purchases when you choose Standard Credit with your Best Buy Credit Card. Points are not awarded on promotional credit purchases. Some products purchased at Pacific Sales® Kitchen & Home Stores are not eligible to get My Best Buy® rewards. Does not include tax. Additional limitations may apply. Subject to My Best Buy Program Terms.
+                 </div>
+            </div>
+            <div id="rightcart">
+              <div>
+                <h1 style="text-align: center;">Order Summary</h1>
+                <hr>
+                <div class="rightflex">
+                    <div>Original Price</div>
+                    <div id="paisahipaisa">$2,110.88</div>
+                </div>
+                <div class="rightflex">
+                    <div>Savings</div>
+                    <div>-$100.00</div>
+                </div>
+                <div class="rightflex">
+                    <div>Store Pickup</div>
+                    <div>FREE</div>
+                </div>
+                <div class="rightflex">
+                    <div>Estimated Sales Tax</div>
+                    <div>$94.75</div>
+                </div>
+                <hr>
+                <div id="rightflex">
+                    <div>Total</div>
+                    <div id="paisa">$2,105.63</div>
+                </div>
+                <br>
+                <button id="btnCheckout" onclick="movetopayment()">Checkout</button>
+                <br>
+                <br>
+                <button id="btnPaypal"><i>Paypal</i> <span>Checkout</span></button>
+                
+                <div><span id="paypalbelow">Sign in or create an account now</span> to get My Best Buy™ Points
+              <br> <br> </div>
+              <hr>
+              <div>
+                  <p style="font-size: 20px; font-weight: 900;margin: 6px;">Apply today,shop today</p style="font-size: 18px;">
+                 <div style="display: flex; ">
+                    <div>
+                        <img src="https://www.bestbuy.com/~assets/bby/_com/MBBCC_MBBVC_2018_RGB-947585d1258e6806d8eeb072b8d2ad6a.png" alt="" height="60px" width="100px" style="margin-top: 12px;">
+                        <p style="color: blue;margin: 4px;font-size: 13px;">Show me how ></p>
+                    </div>
+                    <div id="spanblack">
+                        <p><span>10% back in rewards</span> on first day of purchases for new My Best Buy® Credit Card members</p>
+                        <p><span>$87.74/mo.*</span> suggested monthly payments with <span> 24 month financing</span> on this purchase of $2,105.63</p>
+
+                    </div>
+                 </div>
+              </div>
+              <hr>
+              <div>
+                  <h3 style="font-size: 18px;">Looking for a lease to own option?</h3>
+                  <p>Enjoy the tech you want today.
+                   <span style="color: blue;"> Learn more ></span></p>
+              </div>
+              <hr>
+              <div>
+                  <h3 style="font-size: 18px;">
+                Buying a gift for someone special?
+
+                  </h3>
+                  <p>Gift options can be added in checkout. <span style="color: blue;">Learn more ></span></p>
+              </div>
+              </div>
+            </div>
+            
+         
+        </div>
+    </section>
+    <div id="footer"></div>
+</body>
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d5165a2873.js" crossorigin="anonymous"></script>
+<script src="/cart.js">
+
+</script>
+
+
+
+
+<!-- -----------------------------header script------------------ -->
+
+
+<!-- Footer ends -->
+
+<script type="module">
+    import header from "../landing page/Components/Header.js";
+    var headerdata = document.querySelector("#header");
+    headerdata.innerHTML = header();
+    // var searchingdata = document.querySelector("#inputbox1").value;
+    // searchingdata.addEventListener("",mainshow)
+    var sear=document.querySelector("#searchdata")
+    sear.addEventListener("click",ser)
+    sear.addEventListener("dblclick",dblser)    
+    function dblser(){
+        var showblock=document.querySelector("#searchpacket").style.display="none";
+        
+    }
+    function ser(){
+        var showblock=document.querySelector("#searchpacket").style.display="block";
+        var searchingdata = document.querySelector("#inputbox1").value;
+        async function indata() {
+            try {
+               
+             
+                 var res=await fetch(`https://api.unsplash.com/search/photos?query=${searchingdata}&client_id=4705H5JkxqWRHGwwhn3I4x3Vsc2Dc1cgDUP8xhXoS1g`);
+              var serdata = await res.json();
+              appenddata(serdata.results)
+               console.log(serdata.results) 
+            }
+            catch(err){
+                console.log(err);
+            }
+
+         }
+         indata()
+   
+    }
+        
+    
+            //    console.log(searchingdata)
+   
+   
+  
+        // }
+      
+    
+    function appenddata(result){
+        result.map(element => {
+            var bagsearchdata=[];
+            var imagebox=document.createElement("div");
+            imagebox.setAttribute("id","searchitm")
+            var image=document.createElement("img");
+            var imagebag=document.createElement("div");
+            var textbox=document.createElement("div");
+            var prices=document.createElement("h5");
+            image.src=element.urls.small_s3;
+            image.setAttribute("id","imgs");
+            var name=document.createElement("h4");
+            name.setAttribute("id","blue");
+            name.textContent=element.alt_description;
+            prices.textContent=`Price: ${(Math.floor(Math.random()*1000))}`
+            imagebag.append(image); 
+            textbox.append(name, prices); 
+            imagebox.append(imagebag,textbox);
+            imagebox.addEventListener("click",()=>{
+                bagsearchdata.push(element);
+                localStorage.setItem("selected_items",JSON.stringify(bagsearchdata));
+                 window.location.href="search.html"
+            }) ;
+           
+            document.querySelector("#searchpacket").append(imagebox);
+           });
+          
+}
+
+
+
+    var more=document.querySelector("#moreoption");
+     more.addEventListener("click",moredata);
+     function moredata(){
+     document.querySelector("#Moredroption").style.display="block";
+     
+    } 
+      more=document.querySelector("#moreoption");
+     more.addEventListener("dblclick",remove);
+     function remove(){
+       document.querySelector("#Moredroption").style.display="none";
+    
+     } 
+    //  account drop down ------------------------start------------------------------->
+
+     var drop2=document.querySelector("#Account");
+     drop2.addEventListener("click",dropdata2);
+     function dropdata2(){
+       document.querySelector("#accountoption").style.display="block";
+     }
+      drop2=document.querySelector("#Account");
+     drop2.addEventListener("dblclick",remove2);
+     function remove2(){
+       document.querySelector("#accountoption").style.display="none";
+     }
+
+
+  //  account drop down ----------------------Ends--------------------------------->
+
+
+
+
+
+//   recently viewed items------------------------------- starts--------------->
+
+
+
+var drop3=document.querySelector("#recently");
+     drop3.addEventListener("click",dropdata3);
+     function dropdata3(){
+       document.querySelector("#recently_viewed_items").style.display="block";
+     }
+      drop3=document.querySelector("#recently");
+     drop3.addEventListener("dblclick",remove3);
+     function remove3(){
+       document.querySelector("#recently_viewed_items").style.display="none";
+     }
+
+
+// order stauts------------------------------------------------------>
+
+     var drop4=document.querySelector("#order");
+     drop4.addEventListener("click",dropdata4);
+     function dropdata4(){
+       document.querySelector("#order_status").style.display="block";
+     }
+      drop3=document.querySelector("#order");
+     drop3.addEventListener("dblclick",remove4);
+     function remove4(){
+       document.querySelector("#order_status").style.display="none";
+     }
+
+
+    //  saved images---------------------------------->
+   
+
+
+    var drop5=document.querySelector("#saved");
+     drop5.addEventListener("click",dropdata5);
+     function dropdata5(){
+       document.querySelector(" #saved_images").style.display="block";
+     }
+      drop5=document.querySelector("#saved");
+     drop5.addEventListener("dblclick",remove5);
+     function remove5(){
+       document.querySelector(" #saved_images").style.display="none";
+     }
+
+
+    //  menu___items---------------->
+   
+
+
+    var drop6=document.querySelector("#menu");
+     drop6.addEventListener("click",dropdata6);
+     function dropdata6(){
+       document.querySelector(" #menu_items").style.display="block";
+     }
+      drop6=document.querySelector("#menu");
+     drop6.addEventListener("dblclick",remove6);
+     function remove6(){
+       document.querySelector("#menu_items").style.display="none";
+     }
+
+// location for pages----------------------------------------------------------->
+    
+let topdeals=document.querySelector("#lowbox1a")
+topdeals.addEventListener("click",gototopdeals)
+function gototopdeals(){
+ window.location.href="sample.html";
+}
+
+let dealoftheday=document.querySelector("#lowbox1b")
+dealoftheday.addEventListener("click",gotodealofday)
+function gotodealofday(){
+    window.location.href="sample.html";
+}
+let Bestbuy=document.querySelector("#lowbox1c")
+Bestbuy.addEventListener("click",gotoBestbuy)
+function gotoBestbuy(){
+    window.location.href="sample.html";
+}
+let credit=document.querySelector("#lowbox1d")
+credit.addEventListener("click",gotocredit)
+function gotocredit(){
+    window.location.href="sample.html";
+}
+let giftcredit=document.querySelector("#lowbox1e")
+giftcredit.addEventListener("click",gotogiftcredit)
+function gotogiftcredit(){
+    window.location.href="sample.html";
+}
+let giftidea=document.querySelector("#lowbox1f")
+giftidea.addEventListener("click",gotogiftidea)
+function gotogiftidea(){
+    window.location.href="sample.html";
+}
+
+let cart=document.querySelector("#logocartbtn");
+cart.addEventListener("click",gotocart);
+function gotocart(){
+    alert("Wel-Come To Your Cart");
+    window.location.href="sample.html"
+}
+
+
+</script>
+
+<script type="module">
+    import Footer from "../landing page/Components/Footer.js";
+    console.log(Footer);
+    var box = document.querySelector("#footer");
+    box.innerHTML = Footer();
+</script>

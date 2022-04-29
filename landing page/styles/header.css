@@ -1,0 +1,416 @@
+   body {
+      padding: 0px;
+      margin: 0px; 
+      font-family:Human BBY Digital,Human Fallback,Arial,Helvetica,sans-serif;
+   }
+
+   #container {
+      width: 100%;
+
+   }
+
+   #box {
+      /* position: fixed; */
+      width: 100%;
+      height: 145px;
+      border: rgb(190, 0, 57) 1px solid;
+      border: rgb(0, 70, 190) 1px solid;
+   }
+
+   #upbox {
+      width: 100%;
+      background-color: rgb(0, 70, 190);
+      border: red solid 0px;
+      height: 65%;
+      display: flex;
+   }
+
+   #lowbox {
+      width: 100%;
+      background-color: rgb(0, 70, 190);
+      height: 34%;
+      display: flex;
+      border-top: 1px solid rgb(73, 118, 230);
+   }
+
+   #logo {
+      border: 0px solid gray;
+      flex: 1;
+   }
+
+   #input {
+      border: 0px black solid;
+      flex: 5;
+   }
+
+   #logo2 {
+      border: 0px red solid;
+      flex: 4;
+      display: flex;
+   }
+
+   #logo1 {
+      cursor: pointer;
+      width: 50%;
+      padding: 15% 5% 5% 25%;
+   }
+
+   #input {
+      display: flex;
+   }
+
+   #menu {
+      background-color: rgb(0, 70, 190);
+      margin: 17% 5% 5% 20%;
+      cursor: pointer;
+      color: whitesmoke;
+      font-size: x-large;
+      font-weight: bold;
+      padding-right: 3%;
+      border: 0px solid transparent;
+   }
+
+   #line {
+      width: 20%;
+      border: 0px saddlebrown solid;
+   }
+
+   #inputbox {
+      width: 100%;
+      display: flex;
+      border: 0px whitesmoke solid;
+   }
+
+   #inputbox1 {
+      width: 260%;
+      height: 50%;
+      border: none;
+      padding-left: 1%;
+      margin: 8.80% 0 0 4%;
+      font-size: larger;
+      border-radius: 5px;
+   }
+
+   #logotext {
+      cursor: pointer;
+      flex: 6;
+      margin-top: 1%;
+      text-align: end;
+      font-size: x-large;
+      color: whitesmoke;
+      font-weight: bold;
+   }
+
+   #logocart {
+      flex: 2;
+
+
+   }
+
+   #logocartbtn {
+      background-color: rgb(0, 70, 190);
+      border: none;
+      color: whitesmoke;
+      cursor: pointer;
+      padding: 8%;
+      margin: 10% 5% 10% 30%;
+      font-size: x-large;
+   }
+   #logocartbtn:hover{
+      text-decoration: underline;
+   
+   }
+   #lowbox1 {
+      flex: 9;
+      display: flex;
+      gap: 2%;
+      color: whitesmoke;
+      padding: 0.70% 0 0 1%;
+      font-size: 16px;
+      border: 0px solid rgb(166, 255, 0);
+   }
+
+   #lowbox1a:hover,
+   #lowbox1b:hover,
+   #lowbox1c:hover,
+   #lowbox1d:hover,
+   #lowbox1e:hover,
+   #lowbox1f:hover {
+   
+      border: 0px solid rgb(0, 217, 255);
+      cursor: pointer;
+      text-decoration: underline;
+   }
+
+   #lowbox2 {
+   
+      flex: 1;
+      display: flex;
+      color: whitesmoke;
+      border: 0px solid green;
+   }
+
+   #Account , #recently , #order , #saved{
+      background-color: rgb(0, 70, 190);
+      font-weight:lighter;
+      font-size: 16px;
+      border: none;
+      color: whitesmoke;
+      flex: 1;
+      margin-left: 50px ;
+   }
+   #moreoption {
+      background-color: rgb(0, 70, 190);
+      color: white;
+      display: block;
+      font-size:16px;
+      border: none;
+      cursor: pointer;
+   }
+
+   /* #lowbox1g{
+   display: inline-block;
+   
+   } */
+   #dropdown1{
+      position: absolute;
+      width: 30%;
+      margin-left: 45%;
+      height: 300px;
+      border: 0px saddlebrown solid;
+   }
+   #Moredroption{
+      width: 100%;
+      padding: 3%;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         
+
+   }
+   #Moredroption a{
+      
+      padding: 15px 16px;
+      display: block;
+   }
+
+   #Moredroption a:hover {
+      text-decoration: underline;
+      background-color: #ddd;}
+
+   #Moredroption{
+      border: 0px saddlebrown solid;
+      width:290px ;
+      color:rgb(0, 70, 190); 
+      display: none;
+      position: absolute;
+      font-size:larger ;
+      /* z-index:-1; */
+      height: 200px;
+      /* margin-left: 10%; */
+   }
+   #accountoption{
+      border: 0px solid black;
+      width: 30%;
+      height: 500px;
+      scrollbar-width: thin;
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      /* opacity: .9; */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin-left:40% ;
+      overflow: scroll;
+      display: none;
+      overflow-x: hidden;
+   }
+   .acc , .order , .pro , .pay{
+      border-bottom: gray 1px solid;
+      cursor: pointer;
+      display: flex;
+      padding: 5%;
+      justify-content:space-between;
+      flex: 1;
+   }
+   .class{
+      color:rgb(0,70,190) ;
+   }
+   #accsign , #createacc{
+      width:80%;
+      height: 30px;
+      cursor: pointer;
+      margin-left: 7%;
+      border-radius: 5px;
+      font-size: large;
+   }
+   #accsign{
+      color:whitesmoke;
+      margin-bottom: 3%;
+      background-color:rgb(0,70,190) ;
+   }
+   #createacc{
+      color:rgb(0,70,190) ;
+      border:rgb(0,70,190) 1px solid ;
+   }
+   #createacc:hover{
+      color:whitesmoke;
+      background-color:rgb(0,70,190) ;
+   }
+   .digital, .setting{
+      display: flex;
+      justify-content:space-between;
+   }
+   .gray{
+      border-bottom: 1px solid gray;
+      padding: 5%;
+   }
+
+   #recently_viewed_items{
+      border: 0px saddlebrown solid;
+      display: none;
+      width: 80%;
+      height: 450px;
+      border-radius: 10px;
+      margin-top: 1%;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      /* opacity: .9; */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin-left: 10%;
+   
+   }
+   #recently_head{
+      display: flex;
+      font-size:x-large;
+   margin-top: 2%;
+      justify-content: space-between;
+   }
+   #recently_low{
+      margin-left: 3%;
+      font-size:large;
+      display: flex;
+   }
+   #rec_girl_img{
+      height: 350px;
+   }
+
+
+
+
+   #order_status{
+   border: 0px saddlebrown solid;
+   padding-left: 3%;
+   display: none;
+      width: 80%;
+      height: 350px;
+      border-radius: 10px;
+      margin-top: 1%;
+      background-color: rgb(255, 255, 255);
+      opacity: .9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin-left: 10%;
+      position:relative;
+   }
+   #order_status_low{
+      display: flex;
+      margin-left: 3%;
+   }
+   #orderstatus{
+      cursor: pointer;
+      width: 250px;
+      height: 40px;
+      border-radius:5px ;
+      font-weight: bold;
+      font-size: larger;
+      color: whitesmoke;
+      background-color:rgb(0,70,190) ;
+   }
+   #orderstatus:hover{
+      background-color:rgb(255, 255, 255) ;
+      border: 3px solid rgb(0,70,190) ;
+      color:rgb(0,70,190)  ;
+   }
+   #saved_images{
+   border: 0px saddlebrown solid;
+   padding-left: 3%;
+   display: none;
+      width: 80%;
+      height: 350px;
+      border-radius: 10px;
+      margin-top: 1%;
+      position:relative;
+      background-color: rgb(255, 255, 255);
+      opacity: .9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin-left: 10%;
+    
+   }
+   #saved_images_low{
+      cursor: pointer;
+      display: flex;
+   }
+   #save_img_girl{
+      height: 246px;
+   }
+
+   #menu_items{
+      border: 0px saddlebrown solid;
+   display: none;
+   width: 30%;
+   height: 600px;
+   border-radius: 10px;
+   overflow-x: hidden;
+   font-weight: bolder;
+   margin:-50px 0 0 3%;
+   position: absolute;
+   scrollbar-width: thin;
+   overflow: scroll;
+      background-color: rgb(255, 255, 255);
+      opacity: .9;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      
+   position: absolute;
+      }
+   .item{
+      display: flex;
+      border-bottom: 1px solid gray ;
+      padding: 5%;
+      cursor: pointer;
+      justify-content: space-between;
+   }
+   .inputstyle{
+      height: 50%;
+      margin-top: 5%;
+      cursor: pointer;
+      margin-left: 53%;
+   }
+
+  #searchdata{
+   
+     color: whitesmoke;
+      border: 0px solid gray;
+      background-color: transparent;
+      cursor: pointer;
+  }
+
+   #searchpacket{
+      display: none;
+      width: 36%;
+      margin-left: 20%;
+      border: 0px solid rebeccapurple;
+      background-color: rgb(255, 255, 255);
+      /* opacity: .7; */
+      height: 300px;
+      overflow: scroll;
+      overflow-x: hidden;
+      position:absolute;
+  }
+  #searchitm{
+     display: flex;
+  }
+  #imgs{
+      width: 30%;
+      
+  }
+  #blue{
+      color:blue;
+
+  }

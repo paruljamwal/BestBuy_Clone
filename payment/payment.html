@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #checkouthead{
+          width: 100%;
+          height: 65px;
+          background-color: #0046be;
+          /* border: 1px solid red; */
+      }
+      #mainbody{
+          width: 100%;
+          background-color: white;
+          /* height: 600px; */
+          display: flex;
+          justify-content: space-between;
+          /* border: 1px solid purple; */
+      }
+      body{
+          margin: 0px;
+      }
+      #headerdiv{
+          display: flex;
+          margin-left: 10%;
+      }
+      #headflex{
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+      }
+      #mainbody{
+         width: 70%;
+         margin: auto;
+      }
+      #leftmain{
+          width: 65%;
+      }
+      #headerdiv>div:nth-child(2){
+          margin: auto;
+          color: white;
+          font-size: 34px;
+          font-weight: lighter;
+      }
+      #cardno{
+          padding: 8px 160px;
+      }
+      #nameflex{
+          display: flex;
+      }
+      #FirstName{
+          padding: 8px 35px;
+      }
+      #nameflex>div:nth-child(2){
+          margin-left: 10px;
+      }
+      #LastName{
+          padding: 8px 35px;
+      }
+      #Address{
+          padding: 8px 160px;
+      }
+      #City{
+          padding: 8px 25px;
+      }
+      #State{
+          padding: 8px 10px;
+      }
+      #ZIP{
+          padding: 8px 5px;
+      }
+      #citystatezip{
+          display: flex;
+          gap: 10px;
+      }
+      #leftmain>div:nth-child(2){
+         margin-top: 10px;
+      }
+      #radiobtn{
+          display: flex;
+      }
+      #radio{
+          margin-top: 4px;
+      }
+      #orderbtn{
+          background-color: yellow;
+          padding: 12px 180px;
+          border: 0px;
+          font-weight: bolder;
+          font-size: 16px;
+          border-radius: 5px;
+          margin-top: 25px;
+      }
+      #cardbelow{
+          width: 80%;
+          height: 20px;
+          background-color: #f4f6f9;
+          margin-top: 15px;
+          padding: 5px;
+          color: blue;
+      }
+      #rightmain{
+          width: 30%;
+          /* height: 700px; */
+          /* border: 2px solid rgb(204, 195, 195); */
+          margin-top: 50px;
+      }
+      #rightmain>div{
+          width: 100%;
+          /* height: 700px; */
+          border: 2px solid rgb(204, 195, 195);
+          
+      }
+      #footerpayment{
+          width: 80%;
+          margin: auto;
+      }
+      #spanf1:hover{
+          text-decoration: underline;
+          color: #174492
+      }
+      #spanf2:hover{
+          text-decoration: underline;
+          color: #174492
+      }
+      #spanf3:hover{
+          text-decoration: underline;
+          color: #174492
+      }
+      #spanf4:hover{
+          text-decoration: underline;
+          color: #174492
+      }
+      #spanf4:hover{
+          text-decoration: underline;
+          color: #174492
+      }
+      #proimg{
+          width: 60px;
+          height: 80px;
+          
+      }
+      #div11{
+          margin: auto;
+          text-align: center;
+          margin-bottom: 30px;
+          margin-top: 15px;
+      }
+      #mybtn{
+          color: white;
+          background-color: brown;
+          border: 0px;
+          padding: 4px 3px;
+          border-radius: 2px;
+      }
+      #div11{
+        position: relative;
+      }
+      .logo{
+            font-size: 30px;
+            font-weight: 20px;
+            position: absolute;
+            right: 20px;
+            margin-right: 18px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="checkouthead">
+         <div id="headflex">
+            <div id="headerdiv">
+               <div> <img src="data:image/png;base64,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" alt=""height="65px" width="80px";></div>
+              <div>   Checkout</div>
+              </div>
+              <div style="color: white; padding-top: 25px;" onclick="returntocartpage()">Return to cart</div>
+         </div>
+        </div>
+        <div id="mainbody">
+            <div id="leftmain">
+               <div>
+                <p style="color: blue;"> < Back to pickup & Delivery Option. </p>
+                <h2> How do you want to pay today? </h2>
+                <hr>
+                <p style="font-size: 18px; font-weight: 600;" >Credit or Debit Card</p>
+                <input type="text" id="cardno">
+               </div>
+                <div>
+                    <img src="https://www.bestbuy.com/~assets/bby/_com/MBBCC_MBBVC_2018_RGB-947585d1258e6806d8eeb072b8d2ad6a.png" alt="" height="30px" width="55px">
+                    <img src="https://e7.pngegg.com/pngimages/621/980/png-clipart-discover-logo-discover-card-credit-card-debit-card-payment-fee-discover-logo-text-payment.png" alt=""height="30px" width="60px">
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/2560px-Mastercard-logo.svg.png" alt="" height="30px" width="55px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="" height="30px" width="55px">
+                </div>
+                <div id="cardbelow">Use a <span style="color: #174492;font-weight: bold;">My Best Buy® Credit Card</span> & get Rewards or Flexible Financing</div>
+                <hr>
+                <div style="color: blue; font-size: 14px;">Other payment options</div>
+                <hr>
+                <div style="color: blue; font-size: 14px;" >Use a Best Buy Gift Card, Discount Code or Store Credit</div>
+                <div>
+                    <h2 style="margin-top: 20px; margin-bottom: 10px;">Billing Address</h2>
+                 <div id="nameflex">
+                    <div>
+                        <h3>First Name</h3>
+                        <input type="text" name="" id="FirstName">
+                    </div>
+                    <div>
+                        <h3>Last Name</h3>
+                     <input type="text" name="" id="LastName">
+                    </div>
+                 </div>
+                   <div>
+                       <h3>Address</h3>
+                       <input type="text" id="Address">
+                   </div>
+                   <div id="citystatezip">
+                       <div>
+                           <h3>City</h3>
+                           <input type="text" id="City">
+
+                       </div>
+                       <div>
+                        <h3>State</h3>
+                         <select name="" id="State">
+                             <option value="AL">AL</option>
+                             <option value="AK">AK</option>
+                             <option value="AS">AS</option>
+                             <option value="CA">CA</option>
+                             <option value="CO">CO</option>
+                             <option value="CT">CT</option>
+                             <option value="DE">DE</option>
+                             <option value="FL">FL</option>
+                             <option value="GA">GA</option>
+                             <option value="GU">GU</option>
+                             <option value="HI">HI</option>
+                             <option value="ID">ID</option>
+                             <option value="IN">IN</option>
+                         </select>
+                       </div>
+                       <div>
+                        <h3>ZIP</h3>
+                        <input type="text" id="ZIP">
+                       </div>
+                     
+                   </div>
+                   <div id="radiobtn">
+                    <input type="radio" name="" id="radio">
+                    <p>Remember this information for next time</p>
+                </div>
+                <div>
+                    <div style="font-size: 20px;font-weight: 700;margin-top: 50px;">
+                        Your Offers & Rewards</div>
+                    <div style="font-size: 12px;color: rgb(116, 116, 116);margin-top: 4px;">Member # 5191842569</div>
+                </div>
+                <div>
+                    <div style="font-size: 20px;font-weight: 700;margin-top: 30px;">You don’t have any reward certificates.</div> 
+                   <span style="color: blue;"> Missing a certificate?</span>
+                </div>
+                <p style="margin-top: 50px;">By placing your order, you agree to our <span style="color: blue;" > BestBuy.com Terms and Conditions</span> and our <br> <span style="color: blue;">Privacy Policy.</span></p>
+                </div>
+                <button id="orderbtn" onclick="orderplaced()">Place Your Order</button>
+                <div style="height: 150px;"></div>
+            </div>
+            <div id="rightmain">
+                
+                <p style="margin: 10px; text-align: center;  font-size:20px ;font-weight: bold;">Order Summary</p>
+                 
+                 <div id="display"></div>
+            </div>
+            
+        </div>
+        <hr>
+        <div id="footerpayment">
+            <p style="color: blue; font-size: 14px;"><span id="spanf1">Terms and Conditions</span> |<span  id="spanf2"> Privacy  </span> | <span  id="spanf3"> Interest-Based Ads</span></p>
+             <p style="color: blue; font-size: 14px;"><span id="spanf4">Give Feedback </span>  | <span id="spanf4"> Mobile Site</span> </p>  
+             <p style="font-size: 14px;">Prices and offers are subject to change. © 2022 Best Buy. All rights reserved. BEST BUY, the BEST BUY logo, the Tag Design, MY BEST BUY, and BESTBUY.COM are trademarks of Best Buy and its affiliated companies.</p>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    function returntocartpage(){
+        window.location.href="../cart/cart.html"
+    }
+    function orderplaced(){
+        alert("Your Order id successfully placed");
+        window.location.href="../landing page/landing.html"
+    }
+
+    var div3=document.getElementById("display").innerHTML;
+    var arr=JSON.parse(localStorage.getItem("cartitem"))||[];
+    
+    arr.map((elem)=>{
+       let div=document.createElement("div");
+       div.id="div11"
+       
+       let div4=document.createElement("div");
+       div4.innerHTML="×"
+       div4.style.top="0px"
+       div4.className="logo"
+       let image=document.createElement("img");
+       image.setAttribute("id","proimg");
+       image.src=elem.image;
+
+       let p =document.createElement("p");
+       p.setAttribute("id","texthover");
+       p.innerText=elem.name;
+       p.style.margin="10px"
+
+       let price=document.createElement("p");
+    //    price.setAttribute("","");
+
+       price.innerText=elem.price;
+       price.style.margin="10px"
+       let h5 = document.createElement("p");
+       h5.innerHTML = `&#9733&#9733&#9733&#9733&#9734`;
+       h5.style.margin="10px"
+       h5.style.color="rgb(255, 195, 31)";
+       h5.style.fontSize="20px"
+
+       let save=document.createElement("button");
+       save.setAttribute("id","mybtn");
+       save.innerText=elem.save;
+
+      div.append(image,div4,p,h5,price,save);
+      document.getElementById("display").append(div);
+    
+    })
+    var paisa=localStorage.getItem("paisa");
+
+    var p=document.createElement("h1");
+    p.innerHTML=`Total price=    $${paisa}`
+    p.style.color="green";
+    p.style.textAlign="center"
+    document.getElementById("display").append(p);
+    
+</script>

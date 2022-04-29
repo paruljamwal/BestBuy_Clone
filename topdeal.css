@@ -1,0 +1,666 @@
+/* container in this is Everythinghs */
+#container{
+    width: 100%;
+   
+    display: grid;
+    grid-template-columns: repeat(6,1fr) ;
+    grid-template-rows: 170px 280px 700px 300px 600px 250px 460px 400px 380px 220px 400px 380px 550px ;
+   
+    grid-template-areas: 
+    "a a a a a a"
+    "b b b b b b "
+    "c c c c c c"
+    "d d d d d d"
+    "e e e e e e"
+    "f f f f f f "
+     "g g g g g g"
+     "h h h h h h"
+     "i i i i i i"
+     "k k k k k k"
+     "l l l l l l"
+     "m m m m m m "
+     "n n n n n n"
+     ;
+}
+#container>div{
+    border: 0px solid black;
+}
+#header{
+    grid-area: a;
+}
+#navbar{
+    height:40%;
+    width: 100%;
+}
+#ad{
+    height: 55%;
+    width: 100%;
+ 
+}
+#ad>img{
+    height: 100%;
+    width: 100%;
+}
+#slidebar{
+    grid-area: b;
+}
+#deal{
+    width: 10%;
+    background-color:  #bb0628;
+    color: white;
+    font-size: 30px;
+}
+/* =============================================== */
+#slideimg{
+   
+    width: 100%;
+   
+
+}
+.mySlides {display:none;
+    width: 100%;
+    margin: auto;
+    }
+    
+    .slideimg{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .slideimg>div{
+        height: 100%;
+        width:9%;
+        cursor: pointer;
+    }
+    .slideimg>div:hover{
+        border: 0px solid rgba(0, 0, 255, 0.534);
+       
+    }
+    .slideimg>div>img{
+        width:100px;
+        height:100px;
+        margin-left:14%;
+    }
+    .slideimg>div>p{
+        text-align: center;
+        font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+        color:#001e73;
+        font-size: 13px;
+    }
+    .slideimg>div>p:hover{
+        text-decoration: underline;
+    }
+    #ad{
+        grid-area: z;
+    }
+    
+    #main{
+        height: 200px;
+        width: 100%;
+        display: flex;
+       
+    }
+    #main>button{
+      
+        color:blue;
+        margin-left: 0%;
+        height: 5%;
+        background-color: transparent;
+        border: none;
+        margin-top: 5%;
+
+        
+    }
+
+/* ====================================================== */
+#feature_deal{
+    grid-area:c;
+}
+#bcimg{
+    margin-top: 1%;
+   
+    background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-514773_xlarge-3348807f-70bb-4ae4-bb2a-68f963fb38cb.jpg");
+    height: 87%;
+    width: 100%;
+}
+#bctxt{
+    margin-left: 8%;
+
+}
+#bctxt>p:nth-child(1){
+    font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:25px;
+    color:#0046be ;
+    font-weight: 700;
+}
+.dolor{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:105px;
+    color:#0046be;
+    font-weight:700;
+}
+#bctxt>button{
+    height: 30px;
+    width: 8%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+/* -------------cart div-------- */
+#bytv{
+    grid-area: d;
+    display: flex;
+    
+    
+}
+#bytv>div{
+    border-right: 1px solid rgb(192, 191, 191);
+    height: 100%;
+    width: 24%;
+    margin: auto;
+   
+}
+.checked{
+    color: rgba(255, 255, 0, 0.705);
+    
+}
+.set_format>div>img{
+    height: 35px;
+    width: 20%;
+}
+.set_format>div{
+    line-height: 20px;
+}
+.set_format>div>p{
+    font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight:400;
+    color: #001e73;
+    cursor: pointer;
+}
+.set_format>div>p:hover{
+    text-decoration: underline;
+}
+.save{
+    height: 12%;
+    width: 70%;
+    background-color: rgb(194, 55, 55);
+    color: white;
+    font-size: 16px;
+    
+}
+.addcart1{
+    height: 25%;
+    width: 35%;
+    background-color: yellow;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 9%;
+}
+#pre_order{
+    grid-area: e;
+    display: flex;
+    justify-content: space-between;
+}
+#pre_order>div{
+    border-left:1px solid gray ;
+    width: 33%;
+  
+}
+#pre_order>div>img{
+    height: 50%;
+    width: 70%;
+    margin:10px 15%;
+}
+#prodimg{
+    
+    height: 50%;
+    width: 70%;
+}
+.tex_for{
+    font-size:13px;
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    color:#001e73;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+.tex_for1{
+    font-size:13px;
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    color:#1f3a52;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+.btnpreorrder{
+    height:4.5%;
+    width: 25%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20%;
+    cursor: pointer;
+}
+.addcart{
+    height:5%;
+    width: 30%;
+    background-color:yellow ;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5%;
+    cursor: pointer;
+    font-size: 15px;
+}
+.tex_for:hover{
+    text-decoration: underline;
+}
+#prodimg>img{
+    height: 100%;
+    width: 100%;
+    margin-left: 13%;
+}
+/* =======balck box============= */
+#black_div{
+    grid-area: f;
+    background-color:  #1d252c;
+    margin-bottom: 1%;
+
+   
+}
+#black_div>div{
+    height: 100%;
+    width: 40%;
+    margin: auto;
+    display: flex;
+   
+}
+#black_div>div>div{
+    height: 100%;
+    
+    line-height: 15px;
+}
+#black_div>div>div:nth-child(1){
+    width: 70%;
+    margin-top: 5%;
+   
+}
+#black_div>div>div:nth-child(2){
+    width: 30%;
+}
+#black_div>div>div>p{
+    color: white;
+}
+#black_div>div>div>h1{
+    color: white;
+}
+#black_div>div>div>img{
+    margin-top: 40%;
+    margin-left: -15%;
+}
+#black_div>div>div>button{
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 12%;
+    font-size: 15px;
+    background-color:#1d252c;
+    width: 25%;
+    color: white;
+    cursor: pointer;
+}
+#black_div>div>div>button:hover{
+    background-color: white;
+    color: blue;
+}
+
+/* ==================================== */
+#intellap{
+    grid-area: g;
+    display: flex;
+}
+#intellap>div{
+    height: 100%;
+    width: 50%;
+   
+}
+#intellap>div>img{
+    height: 100%;
+   
+}
+
+#intellap-dtl>p,button{
+    margin-left: 10%;
+}
+#intellap-dtl>span>h1{
+    margin-left: 10%;
+}
+.saveupto{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color:#0046be;
+    font-weight: 700;
+    line-height: 10px;
+}
+#h1tag{
+    font-size: 105px;
+    color: #1d252c;
+    line-height: 10px;
+}
+#onselect{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    color: #1d252c;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 5px;
+}
+#processor{
+    font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    color: #1d252c;
+    font-size: 15px;
+    font-weight:bold;
+    line-height:10px;
+   
+}
+#saving{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    color:#808086;
+    font-size:11px;
+    line-height:18px;
+    font-weight:400;
+}
+.shopbtn{
+    height: 6%;
+    width: 16%;
+    background-color: #0046be;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+.shopbtn:hover{
+    background-color: #001e73;
+}
+
+#intellap-dtl>div{
+    height: 15%;
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+}
+#intellap-dtl>div>img{
+    height: 60%;
+    margin-right: 4%;
+}
+/* ============================ */
+#samsung{
+    grid-area: h;
+    background-color: whitesmoke;
+    display: flex;
+   justify-content: center;
+   margin-top: 0px;
+}
+#samsung>div{
+    height: 97%;
+  
+    width: 30%;
+    margin-top: 1%;
+    
+}
+#phone{
+    height: 100%;
+    width: 100%;
+}
+#phone2{
+    height: 20%;
+    width: 60%;
+    margin-top: 1%;
+}
+#brandicon{
+    display: flex;
+    height: 12%;
+    width: 100%;
+    margin-top: 12%;
+  
+    justify-content: space-between;
+}
+#brandicon>img{
+    width: 20%;
+    height: 40%;
+}
+#giftcard{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color:#0046be;
+    line-height:35px;
+    font-weight:600;
+}
+#galays2{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#68747e;
+    line-height:15px;
+    font-weight:400;
+}
+#offerEnd{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color:#9898a7;
+    line-height:13px;
+    font-weight:200;
+}
+#preorderbtn{
+    height: 7%;
+    width: 29%;
+    margin-left:0px;
+}
+/* =============total teaach============== */
+#totalteach{
+    grid-area: i;
+    display: flex;
+}
+#totalteach>div{
+    height: 90%;
+    width: 50%;
+    justify-content: space-between;
+   
+}
+#first_div{
+    display: flex;
+    background-color: #ebebeb;
+ 
+
+}
+#first_div>div{
+    height: 100%;
+    width: 50%;
+    
+}
+/* #first_div>d{
+    margin: 10px;
+} */
+#first_div>div>img{
+    height:22%;
+    width: 35%;
+}
+#shift{
+    margin: 10px;
+}
+#first_div>div>button{
+    height: 9%;
+    width: 35%;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+#second_div{
+    background-color: #0c36a8;
+}
+#second_div>div{
+    margin:20px;
+}
+#bestbydelalogo{
+    height:15%;
+    width: 25%;
+}
+#second_div>div>h1{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:30px;
+    color:white;
+    font-weight:700;
+    line-height: 30px;
+
+}
+#second_div>div>p{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:15px;
+    color:white;
+    font-weight:300;
+    line-height: 20px;
+    margin-top: -10px;
+
+}
+#second_div>div>button{
+    height:38px;
+    width:18%;
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+
+}
+#creditCard{
+    grid-area:k;
+}
+#creditCard>div>img{
+    width:100%;
+    height:180px;
+}
+#creditCard>button{
+    height: 30px;
+    width: 10%;
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius:5px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+#Deal_ofthe_day{
+    grid-area:l;
+    display: flex;
+    justify-content:space-between;
+}
+#Deal_ofthe_day>div{
+    border: 0.5px solid gray;
+    height: 90%;
+    width: 32%;
+
+}
+#Deal_ofthe_day>div>img{
+    height:68%;
+    width:85%;
+    margin-left:7%;
+    margin-top: 2%;
+}
+.deattxt{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif; 
+    font-size:20px ;
+    color: #001e73;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 5px 8px;
+}
+.deattxt:hover{
+    text-decoration: underline;
+}
+/* ======================================== */
+#dealdetails{
+    grid-area: m;
+}
+.delivaryifo{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+
+}
+.delivaryifo>div{
+    border-left:0.6px solid grey;
+    width: 33%;
+    
+    
+}
+.delivaryifo>div>div{
+    margin-left: 14%;
+}
+#nextpage{
+    height:25%;
+    width: 25%;
+    margin-left:69.8%;
+    border: 1px solid gray;
+    margin-top:1%;
+    display: flex;
+}
+.infoflx{
+    display: flex;
+}
+.infoflx>div>p:nth-child(1){
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:20px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top:29px;
+}
+.infoflx>div>p:nth-child(1):hover{
+    text-decoration: underline;
+   
+
+}
+.infoflx>div>p:nth-child(2){
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-left:5px;
+    line-height: 0px;
+}
+.infoflx>img{
+    height:18%;
+    width: 25%;
+}
+#gotonext{
+    font-family: "Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:20px;
+    margin-top: 4px;
+
+}
+#topDealdealtis2{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:13px;
+    font-weight: bold;
+}
+#topDealdealtis2+P{
+    font-family:"Human BBY Digital", "Human Fallback", Arial, Helvetica, sans-serif;
+    font-size:11px;
+    margin-top: 1px;
+}
+/* ====================footer=========================== */
+#footer{
+    grid-area: n;
+}
+
+
+
+

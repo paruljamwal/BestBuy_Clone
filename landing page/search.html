@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a4b206329f.js" crossorigin="anonymous"></script>
+    <style>
+        #searchitm{
+            display: flex;
+            width: 50%;
+            margin-left: 20%;
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+            border: 1px solid rgb(221, 218, 218);
+            padding: 5%;
+        }
+        #textbag{
+            margin-left: 10%;
+        }
+        #likedislike{
+            border: 0px saddlebrown solid;
+            width: 45%;
+            margin-left: 10%;
+            height: 50px;
+            position:absolute;
+            margin-top: -90px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #red , #yellow{
+            padding: 15%;
+            cursor: pointer;
+            border: 0px;
+            background-color: transparent;
+        }
+        .red{
+           background-color: red;
+        }
+
+        .yellow{
+            background-color: rgb(218, 218, 0);
+        }
+        #gotoback{
+            cursor: pointer;
+            font-size: larger;
+            margin: 2% 0 0 38%;
+            border-radius:10px ;
+            padding:1% 10%;
+            font-weight: bolder;
+            color: rgb(255,206,0);
+            border: 3px rgb(255,206,0) solid;
+        }
+        #gotoback:hover{
+            background-color: rgb(255,206,0);
+            color: whitesmoke;
+      
+        }
+    </style>
+</head>
+<body>
+    <div id="searchdata"></div>
+    <div id="likedislike">
+        <P id="heartcnt"></P><div><button id="red" onclick="redstar()"><i class="fa-solid fa-heart fa-3x"></i></button></div>
+       <p id="thumbcnt"></p> <div><button id="yellow" onclick="Yellowthumb()"><i class="fa-solid fa-thumbs-down fa-3x"></i></button></div>
+    </div>
+   <a href="landing.html"><button id="gotoback">Go Back</button></a> 
+</body>
+</html>
+<script>
+    var box=document.querySelector("#searchdata");
+    var takedata=JSON.parse(localStorage.getItem("selected_items"));
+    // function appenddata(result){
+        takedata.map(element => {
+            var imagebox=document.createElement("div");
+            imagebox.setAttribute("id","searchitm")
+            var image=document.createElement("img");
+            var imagebag=document.createElement("div");
+            var textbox=document.createElement("div");
+            textbox.setAttribute("id","textbag")
+            var prices=document.createElement("h2");
+            prices.style.color="purple";
+            image.src=element.urls.small;
+            image.setAttribute("id","imgs");
+            var name1=document.createElement("h1");
+            name1.textContent=`Name: ${element.user.first_name}`;
+            name1.style.color="green"
+            var Bio=document.createElement("h2");
+            Bio.textContent=`Bio: ${element.user.bio}`
+            var profile=document.createElement("img")
+            profile.src=`${element.user.profile_image.large}`;
+            var insta=document.createElement("h1");
+            insta.textContent=`Instagram_username: ${element.user.instagram_username}`;
+            insta.setAttribute("id","color");
+             var name=document.createElement("h4");
+            name.setAttribute("id","blue");
+            name.textContent=element.alt_description;
+            prices.textContent=`Price: ${(Math.floor(Math.random()*1000))}`
+            imagebag.append(image); 
+            textbox.append(profile,name,name1, prices,Bio); 
+            imagebox.append(imagebag,textbox);
+            imagebox.addEventListener("click",()=>{
+                 window.location.href="sample.html"
+            }) ;
+           
+            document.querySelector("#searchdata").append(imagebox);
+           });
+ var count=0;         
+function redstar(){
+  var heart= document.querySelector("#red");
+  heart.setAttribute("id","red");
+  heart.style.color="red";
+
+}
+var low=0;
+function Yellowthumb(){
+  var thumb= document.querySelector("#yellow");
+  thumb.style.color="orange";
+  thumb.setAttribute("id","yellow");
+
+}
+
+
+</script>
+
+
+

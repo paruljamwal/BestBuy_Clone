@@ -1,0 +1,120 @@
+#contad {
+  display: flex;
+  height: 100%;
+  gap: 1%;
+}
+
+#sidebar {
+  width: 23%;
+  border: 1px solid black;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+#main {
+  width: 77%;
+  border: 1px solid black;
+}
+
+#maindiv {
+  display: flex;
+}
+
+#imagevr {
+  width: 250px;
+  height: 180px;
+  padding: 20px;
+}
+
+#datadiv {
+  width: 600px;
+  height: 200px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#cartdiv {
+  width: 250px;
+  padding: 10px;
+}
+
+#btn {
+  width: 220px;
+  padding: 10px;
+  background-color: yellow;
+  border: none;
+  font-weight: bold;
+}
+
+#btn:hover {
+  background-color: white;
+}
+
+.swiper-wrapper {
+  width: fit-content;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide button {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid blue;
+  color: blue;
+}
+
+.swiper-slide p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.swiper-slide button:hover {
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: blue;
+  font-weight: bolder;
+}
+
+#brand {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#sorting {
+  float: right;
+  margin-bottom: 100px;
+}
+
+#sortprice {
+  padding: 20px;
+  background-color: aliceblue;
+  border: none;
+  position: relative;
+  font-family: Arial;
+}

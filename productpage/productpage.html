@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productpage</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="productpage.css">
+    <link rel="stylesheet" href="../landing page/Components/Header.js">
+    <link rel="stylesheet" href="../landing page/styles/header.css">
+    <script src="https://kit.fontawesome.com/a4b206329f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../landing page/Components/Footer.js">
+    <link rel="stylesheet" href="../landing page/styles/Footer.css">
+</head>
+
+<body>
+
+    <div id="header">
+
+    </div>
+    <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <div id="sorting">
+        Sort By:<select id="sortprice" onchange="sortbyprice()">
+            <option value="Low">Price low to high</option>
+            <option value="High">Price high to low</option>
+            <!-- <option value=""></option> -->
+        </select>
+    </div>
+    <div id="contad">
+        <div id="sidebar">
+            <h3>Get it fast</h3>
+            <input type="checkbox" class="checkbox"> Same-day-pickup
+            <h3>Shipping</h3>
+            <input type="checkbox" class="checkbox" name="" id="">Same day shipping
+            <hr>
+            <h3>Availability</h3>
+            <input type="checkbox" class="checkbox" name="" id="">
+            Exclude Out of Stock Items(579)
+            <hr>
+            <h3>price</h3>
+            <input type="checkbox" class="checkbox"> $25 - $49.99(1) <br>
+            <input type="checkbox" class="checkbox"> $75 - $99.99(4)<br>
+            <input type="checkbox" class="checkbox">
+            $100 - $149.99(10)<br>
+            <input type="checkbox" class="checkbox">
+            $150 - $199.99(21)<br>
+            <input type="checkbox" class="checkbox">
+            $200 - $249.99(30)<br>
+            <input type="checkbox" class="checkbox">
+            $250 - $499.99(96)<br>
+            <input type="checkbox" class="checkbox">
+            $500 - $749.99(125)<br>
+            <input type="checkbox" class="checkbox">$750 - $999.99(156)<br>
+            <input type="checkbox" class="checkbox">
+            $1000 - $1249.99(73)<br>
+            <input type="checkbox" class="checkbox">
+            $1250 - $1499.99(95)<br>
+            <input type="checkbox" class="checkbox">
+            $1500 - $1999.99(133)<br>
+            <input type="checkbox" class="checkbox">
+
+            $2000 - $2499.99(56)<br>
+            <input type="checkbox" class="checkbox">
+
+            $2500 - $2999.99(26)<br>
+            <input type="checkbox" class="checkbox">
+
+            $3000 and Up(17)<br>
+            <hr>
+            <h3>Brand</h3>
+            <input type="text" name="" placeholder="Search brand" id="brand"><br>
+            <input type="checkbox" name="" id="">
+            HP(116)<br>
+            <input type="checkbox" name="" id="">
+            Dell(149)<br>
+            <input type="checkbox" name="" id="">Lenovo(126)<br>
+            <input type="checkbox" name="" id="">
+            ASUS(123)<br>
+            <input type="checkbox" name="" id=""> SAMSUNG<br>
+            <input type="checkbox" name="" id="">Microsoft(44)<br>
+            <input type="checkbox" name="" id="">Apple(1)<br>
+
+            <input type="checkbox" name="" id="">Acer(57)<br>
+            <hr>
+            <h3>Processor Model</h3>
+            <input type="checkbox">
+            Intel Celeron(58) <br>
+            <input type="checkbox">Intel Core i3(28) <br>
+            <input type="checkbox">Intel Core i5(235)<br>
+            <input type="checkbox">
+            Intel Core i7(339)<br>
+            <input type="checkbox">
+            Intel Core i9(21)<br>
+            <input type="checkbox">
+            AMD Ryzen 3(6)<br>
+            <input type="checkbox">AMD Ryzen 5(40)<br>
+            <input type="checkbox">
+            AMD Ryzen 7(38)<br>
+            <input type="checkbox">
+            AMD Ryzen 9(26)<br>
+            <input type="checkbox">
+            Intel Pentium(8<br>
+            <input type="checkbox">
+            Intel Atom(7)<br>
+            <input type="checkbox">AMD Athlon(5)<br>
+            <hr>
+            <h3>Screen size</h3>
+            <input type="checkbox">
+            Less than 12"(41)<br>
+            <input type="checkbox">
+            12" - 14.9"(388)<br>
+            <input type="checkbox">
+            15" - 16.9"(332)<br>
+            <input type="checkbox">
+            17" or More(73)<br>
+            <h3>Operating system</h3>
+            <input type="checkbox">Windows(782)<br>
+            <input type="checkbox">
+            Chrome OS(42)<br>
+            <input type="checkbox">
+            Mac OS(1)<br>
+            <input type="checkbox">
+            None(1)<br>
+            <hr>
+            <h3>Features</h3>
+            <input type="checkbox">Touch Screen(333)<br>
+            <input type="checkbox">Backlit Keyboard(613)<br>
+            <input type="checkbox">Front-Facing Camera(776)<br>
+            <input type="checkbox">Built-In Microphone(447)<br>
+            <input type="checkbox">
+            Numeric Keypad(150)<br>
+            <input type="checkbox">
+            Headphone Jack(445)<br>
+            <input type="checkbox">2-in-1 Design(189)<br>
+            <input type="checkbox">Lightweight/Portable(228<br>
+            <hr>
+            <h3>Condition</h3>
+            <input type="checkbox">New(619)<br>
+            <input type="checkbox">
+            Pre-Owned(20)<br>
+            <input type="checkbox">Refurbished(174)<br>
+            <input type="checkbox">Open-Box(234)<br>
+        </div>
+        <div id="main"></div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+
+</html>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        centeredSlides: false,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "none",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    let object2 = [
+        {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6498/6498469_sd.jpg;maxHeight=300;maxWidth=450",
+            span: "GHOSTBED",
+            detail: "LG - 3.1-Channel 420W Soundbar with Wireless Subwoofer and DTS Virtual:X - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494630_rd.jpg;maxHeight=300;maxWidth=450",
+            span: "",
+            detail: "Sanus - Advanced Tilt 4D TV Wall Mount for TVs 42 Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494640_rd.jpg;maxHeight=300;maxWidth=450",
+            span: "THE CLEAN STORE",
+            detail: "Sanus - Premium Series Advanced Full-Motion TV Wall Mount for Most 42 TVs up to 125 lbs - Black Brushed Metal",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6498/6498270cv1d.jpg;maxHeight=300;maxWidth=450",
+            span: "Hand Towel ",
+            detail: "Legrand - In-Wall Flat Screen Power and Cable Concealment Kit - White",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494644_rd.jpg;maxHeight=300;maxWidth=450",
+            span: "Zinus",
+            detail: "Sanus - Premium Series Super Slim Fixed-Position TV Wall Mount for Most TVs 32-64 up to 150 lbs - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6498/6498790_sd.jpg;maxHeight=300;maxWidth=450",
+            span: "Zinus",
+            detail: "Rocketfish™ - Full-Motion TV Wall Mount for Most 40 - 75 TVs - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6451/6451333_sd.jpg;maxHeight=640;maxWidth=550",
+            span: "Cotton Wash Cloth",
+            detail: "Best Buy essentials™ - Full Motion TV Wall Mount for 47–84 TVs - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9881/9881868_rd.jpg;maxHeight=640;maxWidth=550",
+            span: "NuWallpaper",
+            detail: "Rocketfish™ - Tilting TV Wall Mount for Most 32-75 TVs - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494636_rd.jpg;maxHeight=300;maxWidth=450",
+            span: "NuWallpaper",
+            detail: "Sanus - Mount for Sonos Beam Soundbar (Gen 1, 2) - Black",
+        }, {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6499/6499109cv1d.jpg;maxHeight=300;maxWidth=450",
+            span: "Empire Art Direct",
+            detail: "LG 3.1.2 Channel Soundbar with Dolby Atmos - Black",
+        },
+        {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6499/6499107cv1d.jpg;maxHeight=300;maxWidth=450",
+            span: "",
+            detail: "Best Buy® - Totaltech™ Yearly Membership",
+        },
+        {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6499/6499108cv1d.jpg;maxHeight=300;maxWidth=450",
+            span: "",
+            detail: "Rocketfish™ - Universal Soundbar Mounting System - Black",
+        },
+        {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6332/6332693ld.jpg;maxHeight=640;maxWidth=550",
+            span: "",
+            detail: "Sanus - Premium Series Advanced Full-Motion TV Wall Mount for Most TVs 32-55 up to 55 lbs - Black Brushed Metal",
+        },
+        {
+            image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3720/3720011_sd.jpg;maxHeight=640;maxWidth=550",
+            span: "",
+            detail: "AudioQuest - Ocean 5' 4K-8K-10K 48Gbps In-Wall HDMI Cable - Blue/Black",
+        },
+    ]
+
+    appendSponsered(object2)
+
+    function appendSponsered(arr) {
+        let x = ` `;
+        arr.map((el) => {
+            x += `  <div class="swiper-slide">
+          <img
+            src= ${el.image}
+            alt="">
+          <p><b>${el.span}</b> ${el.detail}</p>
+         
+          <button><b>Add To Cart</b></button>
+        </div>`
+        });
+        document.querySelector(".swiper-wrapper").innerHTML = x;
+    }
+
+    var productdata = [
+        {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "799.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477624_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Lenovo - IdeaPad 3 15 HD Touch Screen Laptop - Intel Core i3-1115G4 - Intel UHD Graphics - 8GB Memory - 256GB SSD - Platinum Grey",
+            price: "379.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6477/6477886_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "HP - 15.6 Touch-Screen Laptops - AMD Ryzen 3 - 8GB Memory - 256GB SSD - Natural Silver",
+            price: "399.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6461/6461977_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Lenovo Ideapad 3 15.6 FHD Touch Screen Laptop - Intel Core i5 11th Gen - 12GB Memory - 256GB SSD - Arctic Grey",
+            price: "549.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6479/6479810_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Lenovo - Yoga 7i 2-in-1 15.6 Touch Screen Laptop - Intel Evo Platform Core i7 - 12GB Memory - 512GB Solid State Drive - Dark Moss",
+            price: "849.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "HP - 15.6 Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD - Natural Silver",
+            price: "779.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6469/6469397_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "ASUS - Vivobook 15.6 Laptop - Intel 10th Gen i3 - 8GB Memory - 256GB PCIE SSD - Slate Grey",
+            price: "799.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "399.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "684.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6448/6448848_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "ASUS - ROG Zephyrus 15.6 QHD Gaming Laptop - AMD Ryzen 9 - 16GB Memory - NVIDIA GeForce RTX 3070 - 1TB SSD - Eclipse Grey - Eclipse Grey",
+            price: "789.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "799.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "799.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6480/6480604_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Samsung - Galaxy Book 15.6 LED Touch Screen - Intel® Core™ i5-1165G7 -8GB Memory - 256GB SSD - Mystic Silver",
+            price: "699.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6469/6469400_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "ASUS - 14.0 Laptop - Intel Celeron N4020 - 4GB Memory - 128GB eMMC - Star Black",
+            price: "599.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "999.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "899.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "399.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "599.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5721/5721600_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB SSD (Latest Model) - Space Gray",
+            price: "899.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }, {
+            imgUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6458/6458907_sd.jpg;maxHeight=300;maxWidth=450",
+            name: "Dell - Inspiron 7000 2-in-1 14 Touch-Screen Laptop - AMD Ryzen 5 - 8GB Memory - 256GB Solid State Drive - Blue",
+            price: "234.99",
+            pickup: "Pickup: Order now for pickup on Fri, Mar 11 at Aiea Available today at a location 6 miles away",
+            shipping: "Shipping: Unavailable in your area This item is only available in certain markets.",
+
+        }
+    ]
+    // var cartarr = JSON.parse(localStorage.getItem("cartitems")) || [];
+    sortprice(productdata);
+    function sortprice(productdata) {
+        document.querySelector("#main").innerHTML = "";
+
+        productdata.map(function (data) {
+
+            var maindiv = document.createElement("div");
+            maindiv.id = "maindiv";
+            var imgdiv = document.createElement("div");
+            var imagevr = document.createElement("img");
+            imagevr.setAttribute("src", data.imgUrl);
+            imagevr.id = "imagevr";
+            // imagevr.addEventListener("click","gotodeal")
+            // function gotodeal(){
+            //     window.location.href="../DealDay/deal.html"
+            // }
+            var datadiv = document.createElement("div");
+            datadiv.id = "datadiv"
+            var pickup = document.createElement("p");
+            pickup.innerText = data.pickup;
+            var shipping = document.createElement("p");
+            shipping.innerText = data.shipping;
+            var cartdiv = document.createElement("div");
+            cartdiv.id = "cartdiv";
+            var price = document.createElement("h2");
+            price.innerText = `$${data.price}`;
+
+            var save = document.createElement("p")
+            save.textContent = "Save $100 Was $879.99"
+
+
+            var btn = document.createElement("button");
+            btn.textContent = "Add To Cart";
+            btn.id = "btn"
+
+            var name = document.createElement("div");
+            name.innerText = data.name;
+
+            var p = document.createElement("p")
+            p.textContent = "Free 3-month security software A $14.99 value"
+            imgdiv.append(imagevr);
+            btn.addEventListener("click", cart)
+            function cart() {
+                // add to cart --> items should get added to cart --> cart count should change in navbar;
+                addToCart(data);
+            };
+
+            // btn.addEventListener("click", addtocart)
+            // function addtocart() {
+            //     cartarr.push(data);
+            //     localStorage.setItem("cartitems", JSON.stringify(cartarr));
+            //     alert("Added Succesfully");
+            // }
+
+            datadiv.append(name, pickup, shipping);
+            var element = document.createElement('hr');
+            cartdiv.append(price, p, btn)
+            maindiv.append(imgdiv, datadiv, cartdiv);
+
+
+            document.querySelector("#main").append(maindiv);
+
+        })
+    }
+    function addToCart(data) {
+        // input format : {id:1, title: "Mens Casual Premium Slim Fit T-Shirts",.....}
+        // we need to add this product to the cart ( cart is in local storage)
+        let cart = JSON.parse(localStorage.getItem("cart")) || []; // get cart data from local storage;
+
+        cart.push(data); // add new item to the cart;
+
+        localStorage.setItem("cart", JSON.stringify(cart)); // save the data to local storage;
+    }
+
+
+    function sortbyprice() {
+        var pricesort = document.querySelector("#sortprice").value;
+        if (pricesort === "Low") {
+            console.log(pricesort);
+            productdata.sort(function (a, b) {
+                return a.price - b.price;
+            });
+        }
+        else if (pricesort === "High") {
+            console.log(pricesort);
+            productdata.sort(function (a, b) {
+                return b.price - a.price;
+            });
+        }
+
+        sortprice(productdata);
+        alert("Your are choosing" + " " + pricesort + " " + "form of price !");
+
+    }
+
+
+
+</script>
+
+<script type="module">
+
+    import header from "../landing page/Components/Header.js";
+    var headerdata = document.querySelector("#header");
+    headerdata.innerHTML = header();
+
+    let cart = document.querySelector("#logocartbtn");
+    cart.addEventListener("click", gotocart);
+    function gotocart() {
+        alert("Wel-Come To Your Cart");
+        window.location.href = "../cart/cart.html"
+    }
+    let dealoftheday=document.querySelector("#lowbox1b")
+dealoftheday.addEventListener("click",gotodealofday)
+function gotodealofday(){
+    window.location.href="../DealDay/deal.html";
+}
+
+let topdeals=document.querySelector("#lowbox1a")
+topdeals.addEventListener("click",gototopdeals)
+function gototopdeals(){
+ window.location.href="../topdeal.html";
+}
+
+
+</script>
+
+
+
+<script type="module">
+    import Footer from "../landing page/Components/Footer.js";
+    console.log(Footer);
+    var box = document.querySelector("#footer");
+    box.innerHTML = Footer();
+
+</script>
